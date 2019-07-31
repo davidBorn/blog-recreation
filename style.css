@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    margin: 0;
+    
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-areas: 
+    ". pinnedPost"
+    ". posts"
+    ". footer"
+    
+ 
+}
+
+
+/*sidebar styling*/
+
+.sidebar {
+    display: grid;
+    grid-area: sidebar;
+    background: rgb(61, 79, 93);
+    height: 100vh;
+    width: 20%;
+    align-items: center;
+    justify-items: end;
+    padding: 30px;
+
+
+    position: fixed;
+   
+
+}
+
+.brand-title {
+    color:white; 
+    display: grid;
+    justify-content: end;
+    font-size: 2em;
+    text-align: right;
+    position: sticky;
+    position: -webkit-sticky;
+    font-family: sans-serif;
+
+}
+
+.brand-tagline {
+    color:rgb(176, 202, 219);
+    display: grid;
+    justify-content: end;
+    font-weight: 300;
+    text-align: right; 
+    font-family: sans-serif;
+
+}
+
+.nav-list {
+    list-style: none;
+    font-family: sans-serif;
+    
+    
+    
+}
+
+.nav-item{
+    list-style: none;
+    display: inline-block;
+    float: right;
+    margin: 0 0 0 .5em;
+    
+     
+}
+
+.nav-item a{
+    background: transparent;
+    border: 2px solid rgb(176, 202, 219);
+    color: #fff;
+    margin-top: 1em;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: 85%;
+ 
+  
+}
+
+.pure-button{
+    font-family: inherit;
+    padding: .5em 1em;
+    border: 1px solid #999;
+    border: none transparent;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    border-radius: 2px;
+    font-family: sans-serif;
+}
+
+.pure-button:hover {
+    border: 2px solid rgb(61, 146, 201);
+
+}
+
+
+.pure-button {
+    display: inline-block;
+    
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-selct: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(61, 146, 201);
+}
+
+
+/*end sidebar styling*/
+
+
+/*pinned post content*/
+.pinnedPost {
+    display: grid;
+    
+    padding: 20px 30px 15px 90px;
+    grid-column-start: 2;
+    grid-area: pinnedPost;
+    box-sizing: border-box;
+    
+}
+
+.pinnedPostContent {
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: .4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: .1em;
+    margin: .67em;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    
+    
+    
+}
+
+.recentPost {
+    display: grid;
+    padding: 0px 30px 20px 90px;
+    margin: 0 0 0 .67em;
+    
+
+    
+    
+
+}
+
+.post-header {
+    display: grid;
+    grid-template-columns: 90% auto;
+    grid-template-areas: 
+    "blog-title avatar"
+    "post-author .";
+    font-family: sans-serif;
+
+    
+
+}
+
+.blog-title { 
+    grid-area: blog-title;
+    align-self: center;
+    padding: 0;
+    font-size: 210%;
+    font-family: sans-serif;
+}
+
+.avatar {
+    grid-area: avatar;
+    border-radius: 50%;
+    justify-self: end;
+    align-content: center;
+    padding: 0 10px;
+    
+}
+
+.post-author {
+    grid-area: post-author;
+    font-family: sans-serif;
+  
+  
+}
+
+.author {
+    
+    font-size: 72%;
+    font-weight: 500;
+    padding: 5px 0 0 0; 
+    text-transform: uppercase;
+    justify-self: left;
+    color: #aaa;
+    text-decoration: none;
+
+  
+}
+
+a:hover {
+    border-bottom: 1px solid rgb(61, 146, 201);
+}
+
+.comment{
+    display: grid;
+    padding: 20px 0 40px 0;
+    font-family: Georgia, "Cambria", serif;
+    line-height: 1.6;
+}
+
+
+
+/*end of pinned post content*/
+
+.photos {
+    display: grid;
+    padding: 0px 30px 20px 90px;
+    margin: 0 0 0 .67em;
+    padding: 10 0 0 0;
+}
+
+/*pictures grid*/
+
+.pictureComments{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, auto); 
+    grid-auto-rows: auto; 
+    grid-gap: 10px;
+    margin: 10px 0 0 0;
+}
+
+.pic1{
+    padding: 10 0 0 0;
+   
+    grid-column-start: 1;
+    justify-self: end;
+    
+    display:flex;
+}
+
+.pic2{
+    padding: 10 0 0 0;
+    grid-column-start: s;
+   
+    display: flex;
+}
+
+.responsiveImage1 {
+    max-width: 100%;
+    height: auto;
+}
+
+.responsiveImage2 {
+    max-width: 100%;
+    height: auto;
+}
+/*end picture grid*/ 
+
+.posts{
+    grid-column-start: 2;
+    grid-area: posts;
+}
+
+.footer {
+    grid-column-start: 2;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: auto 10% auto;
+    
+    color: #aaa;
+    padding: .4em 0;
+    font-size: 75%;
+    font-weight: 500;
+
+    margin: .67em;
+   
+    font-family: sans-serif;
+
+
+    
+}
+
+.about {
+    grid-column-start: 1;
+    justify-self: end;
+    cursor: pointer;
+    
+
+}
+
+.twitter { 
+    grid-column-start: 2;
+    justify-self: center;
+    
+    cursor: pointer;
+
+}
+
+.github {
+    grid-column-start: 3;
+    justify-self: start;
+    cursor: pointer;
+    
+    
+}
+
+.about{color: #aaa;}
+.twitter{color: #aaa;}
+.github{color: #aaa;
+;
+
